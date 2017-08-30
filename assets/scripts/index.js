@@ -12,3 +12,12 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+
+
+let timeleft = 7;
+let downloadTimer = setInterval(function() {
+  timeleft--;
+  document.getElementById("countdowntimer").textContent = timeleft;
+  if (timeleft <= 0)
+    clearInterval(downloadTimer);
+}, 1000);
