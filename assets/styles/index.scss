@@ -1,27 +1,34 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap'; //////////Signup///////
 
+body {
+  // background-color: #EAE9DF;
+}
 
+.centered-form {
+  margin-top: 10px;
+}
+
+.centered-form .panel {
+  background: #808888;
+  color: green;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 15px;
+}
 //////////Countdow clock/////////
-
 .timer {
   background-color: #000;
   font-family: cursive;
-
-  // font-size: 30px;
   font-weight: 300;
   text-align: center;
   // color: #ffff00;
-  // padding: 5px;
-
 }
 
 #countdowntimer {
+  color: ffff00;
   font-family: cursive;
   font-size: 25px;
   font-weight: 300;
   text-align: center;
-  color: ffff00;
 }
 
 .button2 {
@@ -32,23 +39,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   color: #ffff00;
   font-family: fantasy;
   font-size: 20px;
+  height: 2%;
   left: 30%;
-  position:fixed;
+  margin-top: 200px;
+  position: relative;
   text-align: center;
-  top: 20%;
-  // padding: 5px;
-  // margin-right: 80px;
-
   text-shadow: 0 1px 0 #263669;
   width: 40%;
 }
-
-.clear1{
-padding: 30px;
-}
 ////////////////////////
-
-
 .top {
   background-color: lightgrey;
   color: #808888;
@@ -66,54 +65,57 @@ padding: 30px;
   // border: 4px solid #39cccc;
   color: #808888;
   float: left;
-  font-size: 100px;
   font-family: Garamond;
-  font-style: normal;
+  font-size: 99px;
+  font-weight: 400;
+  height: 100px;
   line-height: 130px;
-  font-weight: 250;
-  height: 130px;
-  width: 33.3%;
-
+  padding-left: 3%;
+  width: 30%;
+  margin: auto;
+  padding-top: 70px;
 }
-
 
 .hero {
   // border: 4px solid #39cccc;
-  height: 130px;
-  width: 33.3%;
-  background-color: red;
+  background-color: yellow;
   float: left;
+  height: 80px;
+  padding-top: 10px;
+  margin-top: 50px;
+  width: 70%;
+  padding-left: 20px;
 }
 
-.logs {
-  // border: 4px solid #39cccc;
-  height: 130px;
-  width: 33.3%;
-  float: left;
-}
-
+// .logs {
+//   // border: 4px solid #39cccc;
+//   float: left;
+//   height: 100px;
+//   width: 20%;
+// }
 /////////////////////////
-
 #table {
-  width: 25%;
+  float: left;
+  height: 890px;
   margin: auto;
-  height: 800px;
-  background-color: grey;
+  border-radius: 10px;
+  width: 25%;
+  background-color: #808888;
   // border: 2px solid #39cccc;
   // color: white;
-  float: left;
+
 }
 
 th {
-  height: 10px;
-  width: 10px;
-  color: yellow;
+  color: #ffff00;
   font-family: fantasy;
+  height: 10px;
   text-align: center;
+  width: 10px;
 }
 
 tr {
-  color: white;
+  color: #ffffff;
   font-family: fantasy;
   font-size: 20px;
   font-weight: 200px;
@@ -122,15 +124,16 @@ tr {
 
 #inside {
   // background-color: red;
-  height: 750px;
+  height: 820px;
   width: 80%;
-  border: 1px solid #39cccc;
+  border: 3px solid #39cccc;
   align-content: center;
   float: none;
   text-align: center;
   align-content: center;
   padding: 10px;
-  margin: 25px;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .middle {
@@ -144,14 +147,14 @@ tr {
 .wholepicture {
   text-align: center;
   float: left;
-  width: 50%
+  margin-top: 24px;
+  width: 50%;
 }
-
 ////////SMALL TV//////////
 .wholepicture1 {
   text-align: center;
   float: left;
-  width: 50%
+  width: 50%;
 }
 
 .button3 {
@@ -165,15 +168,14 @@ tr {
   margin: auto;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
-  width: 80%
+  width: 80%;
 }
+
 .button3:hover {
   background-color: #747575;
   color: #ffffff;
 }
 /////////////////////
-
-
 
 #services {
   background-color: black;
@@ -201,6 +203,10 @@ tr {
   padding: 5px 20px;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
+  width: 220px;
+  margin:auto;
+  padding-top: 10px;
+
 }
 
 .button:hover {
@@ -219,7 +225,7 @@ tr {
   margin: auto;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
-  width: 80%
+  width: 80%;
 }
 
 .button1:hover {
@@ -227,29 +233,29 @@ tr {
   color: #ffffff;
 }
 
-
-
-
-.clear{
-margin:20px;
-width: 20px;
+.clear {
+  margin: 20px;
+  width: 20px;
 }
 
-.clearsmalltv{
-margin: 10px;
-width: 20px;
+.clearsmalltv {
+  margin: 10px;
+  width: 20px;
 }
 //
 // .timerbot {
 //   width: 100px;
 //   text-align: center;
 // }
+
 #container {
   width: 100%;
   margin: auto;
 }
-footer{
+
+footer {
   font-size: 10px;
+  color: white;
 }
 // #outside {
 //   background-color: green;
