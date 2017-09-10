@@ -1,106 +1,91 @@
 'use strict';
 
-const app = require('../app.js');
+const app = require('./app');
+// const getFormFields = require('../../../lib/get-form-fields.js');
 
-// authApi.signUp(authUi.success, authUi.failure, data)
+//authApi.signUp(authUi.success, authUi.failure, data);
 
-const signUp = function(data) {
-  // console.log(data)
+const signUp = function(data){
+  console.log(data);
   return $.ajax({
     url: app.host + '/sign-up/',
     method: 'POST',
     data: {
-      'credentials': {
-        'email': data.credentials.email,
-        'password': data.credentials.password,
-        'password_confirmation': data.credentials.password
+      credentials: {
+        first_name: data.first_name,
+        last_name: data.last_name,
+        email: data.email,
+        password: data.password,
+        password_confirmation: data.password_confirmation
       }
     }
-  })
+  });
 };
 
-const signIn = function(data) {
-  // console.log(data)
+const signIn = function(data){
+  console.log(data);
   return $.ajax({
     url: app.host + '/sign-in/',
     method: 'POST',
-    data
-  })
+    data: {
+      credentials: {
+        email: data.email,
+        password: data.password,
+      }
+    }
+  });
 };
 
-const signOut = function() {
+const signOut = function(){
   return $.ajax({
     method: 'DELETE',
     url: app.host + '/sign-out/' + app.user.id,
     headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
-  })
+      Authorization: 'Token token=' + app.user.token,
+
+   }
+  });
 };
 
-const changePassword = function(data) {
+const changePassword = function(data){
   return $.ajax({
     method: 'PATCH',
     url: app.host + '/change-password/' + app.user.id,
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token=' + app.user.token,
     },
     data: {
-      'passwords': {
-        'old': data.credentials.old,
-        'new': data.credentials.new
+      credentials: {
+        email: data.password,
+        password: data.password,
       }
     }
-  })
-}
+    });
 
+    // const post = function(data){
+    //   console.log(data);
+    //   return $.ajax({
+    //     url: app.host + '/sign-up/',
+    //     method: 'POST',
+    //     data: {
+    //       credentials: {
+    //         first_name: data.first_name,
+    //         last_name: data.last_name,
+    //         email: data.email,
+    //         password: data.password,
+    //         password_confirmation: data.password_confirmation
+    //       }
+    //     }
+    //   });
+    // };
+    };
 
-const createGame = (data) => {
-  console.log(data)
-  return $.ajax({
-    url: app.host + '/games/',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
-  })
-}
-
-const updateGame = (index, val, over) => {
-  return $.ajax({
-    url: app.host + '/games/' + app.game.id,
-    method: 'PATCH',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    },
-    data: {
-      'game': {
-        'cell': {
-          'index': index,
-          'value': val
-        },
-        'over': over
-      }
-    }
-  })
-}
-
-const getHistory = (data) => {
-  return $.ajax({
-    url: app.host + '/games?over=true',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
-  })
-}
 
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
-  createGame,
-  updateGame,
-  getHistory
-}
+  // post,
+
+};
