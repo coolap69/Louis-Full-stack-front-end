@@ -62,22 +62,33 @@ const changePassword = function(data){
     }
     });
 
-    // const post = function(data){
-    //   console.log(data);
-    //   return $.ajax({
-    //     url: app.host + '/sign-up/',
-    //     method: 'POST',
-    //     data: {
-    //       credentials: {
-    //         first_name: data.first_name,
-    //         last_name: data.last_name,
-    //         email: data.email,
-    //         password: data.password,
-    //         password_confirmation: data.password_confirmation
-    //       }
-    //     }
-    //   });
-    // };
+    const createPost = function(data){
+      console.log(data);
+      return $.ajax({
+        url: app.host + '/posts/',
+        method: 'POST',
+        data: {
+          credentials: {
+            title: data.title,
+            description: data.description,
+            service_id: data.service_id,
+          }
+        }
+      });
+
+      const post = function(data){
+        console.log(data);
+        return $.ajax({
+          url: app.host + '/category/',
+          method: 'POST',
+          data: {
+            credentials: {
+              category: data.category,
+
+            }
+          }
+        });
+    };
     };
 
 
@@ -86,6 +97,7 @@ module.exports = {
   signIn,
   signOut,
   changePassword,
-  // post,
-
+  post,
+  category,
+};
 };
