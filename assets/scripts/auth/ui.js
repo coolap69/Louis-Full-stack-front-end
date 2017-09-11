@@ -18,6 +18,28 @@ const changePasswordSuccess = () => {
   console.log("Password Successfully Changed.");
 };
 
+const createPostSuccess = (data) => {
+  // app.user = data.user;
+  console.log(data);
+};
+
+
+const createPostFail = (data) => {
+  // app.user = data.user;
+  console.log(data);
+};
+
+// const getServiceSuccess = (data) => {
+//   // app.user = data.user;
+//   console.log(data);
+// };
+//
+//
+// const getServiceFail = (data) => {
+//   // app.user = data.user;
+//   console.log(data);
+// };
+
 const success = (data) => {
   console.log(data);
 };
@@ -31,5 +53,7 @@ module.exports = {
   success,
   signInSuccess,
   signOutSuccess,
-  changePasswordSuccess
+  changePasswordSuccess,
+  createPostFail,
+  // getServiceFail,
 };

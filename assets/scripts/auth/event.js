@@ -37,7 +37,24 @@ const onChangePassword = function(event){
   .fail(ui.fail);
 };
 
+const onCreatePost = function(event){
+  event.preventDefault();
+  let title = $('#title').val()
+  let description = $('#description').val()
 
+  api.createPost(title, description)
+  .done(ui.createPostSuccess)
+  .fail(ui.createPostFail);
+};
+
+// const onGetService = function(event){
+//   event.preventDefault();
+//   let title = $('#category').val()
+//
+//   api.getService(category)
+//   .done(ui.getServiceSuccess)
+//   .fail(ui.getServiceFail);
+// };
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
@@ -52,4 +69,6 @@ module.exports = {
   onSignIn,
   onSignOut,
   onChangePassword,
+  onCreatePost,
+  // onGetService,
 };

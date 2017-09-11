@@ -7,6 +7,15 @@ events.addHandlers()
 
 $(() => {
   setAPIOrigin(location, config)
+
+
+
+
+
+
+
+
+$('#postButton').on("click", events.onCreatePost)
 })
 
 // use require with a reference to bundle the file and use it in this file
@@ -23,3 +32,15 @@ let downloadTimer = setInterval(function() {
   if (timeleft <= 0)
     clearInterval(downloadTimer);
 }, 1000);
+
+
+
+// let player = 'X';
+//
+// // do this when a Box is clicked
+// $(".services").click(function() {
+//   // detect if Box already has an X or O in it, if so, end this function
+//   if ($(this).text() == 'X' || $(this).text() == 'O') {
+//     alert("choose another box")
+//     return
+//   }

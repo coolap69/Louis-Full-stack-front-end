@@ -26,7 +26,7 @@ const signIn = function(data){
   console.log(data);
   return $.ajax({
     url: app.host + '/sign-in/',
-    method: 'POST',
+    method: 'GET',
     data: {
       credentials: {
         email: data.email,
@@ -60,35 +60,38 @@ const changePassword = function(data){
         password: data.password,
       }
     }
-    });
+  });}
 
-    const createPost = function(data){
-      console.log(data);
+    const createPost = function(title, description){
+      console.log(title, description);
       return $.ajax({
         url: app.host + '/posts/',
         method: 'POST',
         data: {
-          credentials: {
-            title: data.title,
-            description: data.description,
-            service_id: data.service_id,
+          post: {
+            title: title,
+            description: description,
+            id: 1,
+            user_id: 1,
+            date_time: 1,
+            service_id: 1,
           }
         }
       });
 
-      const post = function(data){
-        console.log(data);
-        return $.ajax({
-          url: app.host + '/category/',
-          method: 'POST',
-          data: {
-            credentials: {
-              category: data.category,
-
-            }
-          }
-        });
-    };
+      // const getService = function(category){
+      //   console.log(category);
+      //   return $.ajax({
+      //     url: app.host + '/category/',
+      //     method: 'GET',
+      //     data: {
+      //       get: {
+      //         category: category,
+      //
+      //       }
+      //     }
+      //   });
+    // };
     };
 
 
@@ -97,7 +100,6 @@ module.exports = {
   signIn,
   signOut,
   changePassword,
-  post,
-  category,
-};
+  createPost,
+  // getService,
 };
