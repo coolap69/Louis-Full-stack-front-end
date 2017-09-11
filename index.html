@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="container">
+      <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Please Sign Up to Wad <small>It's free!</small></h3>
+            </div>
+            <div class="panel-body">
+              <form id="signUp" role="form">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                </div>
+
+                <input type="submit" value="Register" class="btn btn-info btn-block">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="container">
+      <div class="container">
+        <div class="row centered-form">
+          <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Sign in to Wad</h3>
+              </div>
+              <div class="panel-body">
+                <form id="signIn" role="form">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+
+                    </div>
+                  </div>
+
+                  <input type="submit" value="Sign in" class="btn btn-info btn-block">
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="sign">
+        <div class="top">Home</div>
+        <div></div>
+
+        <form id="signOut">
+          <fieldset>
+            <input type="submit" name="submit" value="Sign out!">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="logo">Wads</div>
+    <div class="hero"><img src="https://i.imgur.com/o3dOqQY.png" alt="My Example" title="source: imgur.com" width="80%" height="80%"></div>
+
+
+    <div class="button2">Timer: <span id="countdowntimer"> 7 </span> Seconds till next Wad</div>
+    <div class="clear1"></div>
+
+    <div id="table">
+      <table id="inside">
+        <tr>
+          <th id="services">Services</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="button">Mechanic<div class="dropdown-content1">
+              <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Title</label>
+              <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+              <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Description</label>
+              <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+              <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+          <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+        </form>
+        </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Painting<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Health<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Pet Care<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Labor<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Electronics<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Therapeutic<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div class="button">Beauty<div class="dropdown-content1">
+                <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Description</label>
+                <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+
+            <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+          </form>
+          </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="wholepicture"><img src="https://i.imgur.com/PFRsbL7.png" alt="My Example" title="source: imgur.com" /width="90%" height="90%"></a>
+    <div class="clear"></div>
+
+
+
+
+      <div class="clear"></div>
+
+
+
+    <div class="buttonservices">Show Me a Service <div class="dropdown-content">
+      <table id="table1"
+      <tr><th><div class="button4">Mechanic</div></th>
+      <th><div class="button4">Creative</div></th></tr>
+      <tr><td><div class="button4">Painting</div></td>
+      <td><div class="button4">Financial</div></td></tr>
+      <tr><td><div class="button4">Personal health</div></td>
+      <td><div class="button4">Tutoring</div></td></tr>
+      <tr><td><div class="button4">Pet Care</div></td>
+      <td><div class="button4">Legal Advice</div></td></tr>
+      <tr><td><div class="button4">Labor</div></td>
+      <td><div class="button4">Car Advisor</div></td></tr>
+      <tr><td><div class="button4">Electronic Devices</div></td>
+      <td><div class="button4">Insurance</div></td></tr>
+      <tr><td><div class="button4">Therapeutic</div></td>
+      <td><div class="button4">Writer</div></td></tr>
+      <tr><td><div class="button4">Beauty</div></td>
+      <td><div class="button4">Business</div></td></tr>
+
+</table>
+
+    </div>
+  </div>
+
+  <!-- <div id="wholepicture2">Posting -->
+
+    <!-- <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+    <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Description</label>
+    <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+    <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+  </div>
+
+
+-->
+  <!-- <button type="submit" class="btn btn-primary" id="postButton">Submit</button> -->
+<!-- </form> -->
+
+
+  <!-- </div> -->
+
+
+
+    <div class="clear"></div>
+    <div class="wholepicture1"><img src="https://i.imgur.com/PFRsbL7.png" title="source: imgur.com" /width="90%" height="90%">
+      <div class="clearsmalltv">
+
+</div>
+
+      <div class="today">Today</div>
+    </div>
+    <div class="wholepicture1"><img src="https://i.imgur.com/PFRsbL7.png" title="source: imgur.com" /width="90%" height="90%">
+      <div class="clearsmalltv"></div>
+      <div class="yesterday">Yesterday</div>
+
+
+    </div>
+  </div>
+
+  <div id="table">
+    <table id="inside">
+      <tr>
+        <th id="services">Services</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Creative<div class="dropdown-content2">
+            <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Title</label>
+            <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
+            <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Description</label>
+            <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
+            <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+        </form>
+      </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Financial</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Tutoring</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Legal Advise</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Car Dealer</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Insurance</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Writer</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button">Bussiness</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+<footer>Designed by Louis Pazos</footer>
+
+</html>
