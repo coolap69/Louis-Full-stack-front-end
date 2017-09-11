@@ -393,10 +393,10 @@ display: block;
 
     display: none;
     position: absolute;
-    min-width: 160px;
+    min-width: 50px;
     box-shadow: 0px 8px 16px 0px rgba(116,117,117,0.2);
     border-radius: 15px;
-    padding: 12px 16px;
+    padding: 8px 8px;
 
 }
 
@@ -404,8 +404,8 @@ display: block;
 
 background-color: rgba(255, 255, 0, 0.6);
 display:inline;
-margin-left: 4.5%;
-margin-bottom: 100%;
+margin-left: 4%;
+margin-bottom: 8%;
 
 }
 
@@ -429,7 +429,17 @@ margin-bottom: 100%;
 
 }
 
+#postButton {
+  margin-top: 20px;
+  margin-left: 10px;
+  z-index: auto;
+}
 
+// .form-group {
+// width: 50px;
+// height: 50px
+//
+// }
 footer {
   font-size: 10px;
   color: white;
