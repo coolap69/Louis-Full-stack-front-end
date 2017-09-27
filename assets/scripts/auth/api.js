@@ -1,14 +1,12 @@
-'use strict';
+'use strict'
 
-const app = require('./app');
-// const getFormFields = require('../../../lib/get-form-fields.js');
+const app = require('./app.js')
 
-//authApi.signUp(authUi.success, authUi.failure, data);
-
-const signUp = function(data){
-  console.log(data);
+const signUp = function (data) {
+  console.log('passing thought api js')
+  console.log(app.host)
   return $.ajax({
-    url: app.host + '/sign-up/',
+    url: app.host + '/sign-up',
     method: 'POST',
     data: {
       credentials: {
@@ -19,87 +17,48 @@ const signUp = function(data){
         password_confirmation: data.password_confirmation
       }
     }
-  });
-};
+  })
+}
 
-const signIn = function(data){
-  console.log(data);
+const signIn = function (data) {
   return $.ajax({
-    url: app.host + '/sign-in/',
-    method: 'GET',
+    url: app.host + '/sign-in',
+    method: 'POST',
     data: {
       credentials: {
         email: data.email,
-        password: data.password,
+        password: data.password
       }
     }
-  });
-};
+  })
+}
 
-const signOut = function(){
+const changePassword = function (data) {
+  console.log('passing through the api.js')
   return $.ajax({
-    method: 'DELETE',
-    url: app.host + '/sign-out/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-
-   }
-  });
-};
-
-const changePassword = function(data){
-  return $.ajax({
+    url: app.host + '/change-password'/ + app.user.id,
     method: 'PATCH',
-    url: app.host + '/change-password/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data
+  })
+}
+
+const signOut = function() {
+  console.log('passing through the api.js')
+  return $.ajax({
+    url: app.host + '/sign-out'/ + app.user.id,
+    method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token,
-    },
-    data: {
-      credentials: {
-        email: data.password,
-        password: data.password,
-      }
     }
-  });}
-
-    const createPost = function(title, description){
-      console.log(title, description);
-      return $.ajax({
-        url: app.host + '/posts/',
-        method: 'POST',
-        data: {
-          post: {
-            title: title,
-            description: description,
-            id: "",
-            user_id: "",
-            date_time: "",
-            service_id: "",
-          }
-        }
-      });
-
-      // const getService = function(category){
-      //   console.log(category);
-      //   return $.ajax({
-      //     url: app.host + '/category/',
-      //     method: 'GET',
-      //     data: {
-      //       get: {
-      //         category: category,
-      //
-      //       }
-      //     }
-      //   });
-    // };
-    };
-
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
-  signOut,
   changePassword,
-  createPost,
-  // getService,
-};
+  signOut
+}

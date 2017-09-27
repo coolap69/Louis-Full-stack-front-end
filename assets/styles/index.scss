@@ -5,9 +5,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 //////////Body/////////
 ////////////////////////////////
 
-body {
-  // background-color: #EAE9DF;
-}
+// body {
+//   // background-color: #EAE9DF;
+// }
 
 //////////////////////////////////
 //////////sign out form/////////
@@ -17,8 +17,9 @@ body {
 }
 
 .centered-form .panel {
-  margin-background: #808888;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 15px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 15px 15px;
+  background-color: #808888;
+
 }
 // #container2 {
 // padding-left: 30p

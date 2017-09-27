@@ -1,59 +1,50 @@
-'use strict';
-//remove signIn and signOut
-const app = require('./app.js');
+'use strict'
 
-//remove me before code-along
-const signInSuccess = (data) => {
-  app.user = data.user;
-  console.log(app);
-};
+const app = require('../store.js')
+const ux = require('./ux.js')
 
-//remove me before code-along
-const signOutSuccess = () => {
-  app.user = null;
-  console.log(app);
-};
+const onSignUpSuccess = function () {
+  console.log('You successfully created an account')
+}
 
-const changePasswordSuccess = () => {
-  console.log("Password Successfully Changed.");
-};
+const onError = function (response) {
+  console.error(response)
+}
 
-const createPostSuccess = (data) => {
-  // app.user = data.user;
-  console.log(data);
-};
+const onSignInSuccess = function (data) {
+  ux.signIn()
+  console.log('You successfully sign in')
+  app.user = data.user
+}
 
+const onSignInError = function (response) {
+  console.error(response)
+}
 
-const createPostFail = (data) => {
-  // app.user = data.user;
-  console.log(data);
-};
+const onChangePasswordSuccess = function () {
+  console.log('You succesfully change your password')
+}
 
-// const getServiceSuccess = (data) => {
-//   // app.user = data.user;
-//   console.log(data);
-// };
-//
-//
-// const getServiceFail = (data) => {
-//   // app.user = data.user;
-//   console.log(data);
-// };
+const onChangePasswordError = function (response) {
+  console.log(response)
+}
 
-const success = (data) => {
-  console.log(data);
-};
+const onSignOutSuccess = function () {
+  console.log('You successfully sign out')
+  app.user = null
+}
 
-const failure = (error) => {
-  console.error(error);
-};
+const onSignOutError = function (response) {
+  console.log(response)
+}
 
 module.exports = {
-  failure,
-  success,
-  signInSuccess,
-  signOutSuccess,
-  changePasswordSuccess,
-  createPostFail,
-  // getServiceFail,
-};
+  onSignUpSuccess,
+  onError,
+  onSignInSuccess,
+  onSignInError,
+  onChangePasswordSuccess,
+  onChangePasswordError,
+  onSignOutSuccess,
+  onSignOutError
+}

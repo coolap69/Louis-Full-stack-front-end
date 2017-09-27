@@ -2,20 +2,21 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
-const events = require('./auth/event.js')
-events.addHandlers()
+const event = require('./auth/event.js')
+// events.addHandlers()
 
 $(() => {
   setAPIOrigin(location, config)
+})
 
-
-
-
-
-
-
-
-$('#postButton').on("click", events.onCreatePost)
+$(() => {
+  $('#signUp').on('submit', event.onSignUp)
+  $('#signIn').on('submit', event.onSignIn)
+  $('#change-password').on('submit', event.onChangePassword)
+  $('#signOut').on('submit', event.onSignOut)
+   // $('#postButton').on('click', event.onCreatePost)
+  // $('#postButton').on('click', event.onGetService)
+  // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
 })
 
 // use require with a reference to bundle the file and use it in this file
@@ -25,7 +26,7 @@ $('#postButton').on("click", events.onCreatePost)
 // require('./example')
 
 /////////time clock//////
-let timeleft = 7;
+let timeleft = 7
 let downloadTimer = setInterval(function() {
   timeleft--;
   document.getElementById("countdowntimer").textContent = timeleft;
