@@ -36,7 +36,7 @@ const signIn = function (data) {
 const changePassword = function (data) {
   console.log('passing through the api.js')
   return $.ajax({
-    url: app.host + '/change-password'/ + app.user.id,
+    url: app.host + '/change-password' / +app.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -45,13 +45,13 @@ const changePassword = function (data) {
   })
 }
 
-const signOut = function() {
+const signOut = function () {
   console.log('passing through the api.js')
   return $.ajax({
-    url: app.host + '/sign-out'/ + app.user.id,
+    url: app.host + '/sign-out' / +app.user.id,
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token=' + app.user.token,
+      Authorization: 'Token token=' + app.user.token
     }
   })
 }

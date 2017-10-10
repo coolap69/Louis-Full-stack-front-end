@@ -8,6 +8,15 @@ const signIn = function () {
   })
 }
 
+const signUp = function () {
+  $(() => {
+    console.log('in the beginning')
+    $('.container').children().hide()
+    console.log('Sucess')
+  })
+}
+
 module.exports = {
-  signIn
+  signIn,
+  signUp
 }

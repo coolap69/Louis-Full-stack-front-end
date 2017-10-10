@@ -14,8 +14,8 @@ $(() => {
   $('#signIn').on('submit', event.onSignIn)
   $('#change-password').on('submit', event.onChangePassword)
   $('#signOut').on('submit', event.onSignOut)
-   // $('#postButton').on('click', event.onCreatePost)
-  // $('#postButton').on('click', event.onGetService)
+  $('#postButton').on('click', event.onCreatePost)
+  $('#postButton').on('click', event.onGetService)
   // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
 })
 
@@ -25,7 +25,7 @@ $(() => {
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-/////////time clock//////
+///////// time clock //////
 let timeleft = 7
 let downloadTimer = setInterval(function() {
   timeleft--;
@@ -33,15 +33,3 @@ let downloadTimer = setInterval(function() {
   if (timeleft <= 0)
     clearInterval(downloadTimer);
 }, 1000);
-
-
-
-// let player = 'X';
-//
-// // do this when a Box is clicked
-// $(".services").click(function() {
-//   // detect if Box already has an X or O in it, if so, end this function
-//   if ($(this).text() == 'X' || $(this).text() == 'O') {
-//     alert("choose another box")
-//     return
-//   }
