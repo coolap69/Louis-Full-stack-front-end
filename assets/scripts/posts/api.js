@@ -12,13 +12,14 @@ debugger
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    post: {
-      user_id: data.user_id,
-      description: data.description,
-      title: data.title,
-      date_time: data.date_time,
-      service_id: data.service_id
-    }
+    data
+  //   post: {
+  //     user_id: data.user_id,
+  //     description: data.description,
+  //     title: data.title,
+  //     date_time: data.date_time,
+  //     service_id: data.service_id
+  //   }
   })
 }
 
