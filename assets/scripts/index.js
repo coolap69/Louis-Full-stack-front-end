@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const event = require('./auth/event.js')
+const postevent = require('./posts/event.js')
 // events.addHandlers()
 
 $(() => {
@@ -14,8 +15,8 @@ $(() => {
   $('#signIn').on('submit', event.onSignIn)
   $('#change-password').on('submit', event.onChangePassword)
   $('#signOut').on('submit', event.onSignOut)
-  $('#postButton').on('click', event.onCreatePost)
-  $('#postButton').on('click', event.onGetService)
+  $('#helloB').on('submit', postevent.onCreatePost)
+  // $('#postButton').on('click', event.onGetService)
   // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
 })
 

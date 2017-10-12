@@ -1,67 +1,62 @@
 'use strict'
 
-const userApi = require('./api.js')
-const userUi = require('./ui.js')
+const postsApi = require('./api.js')
+const postsUi = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
 
-const onSignUp = function (event) {
+const onCreatePost = function (event) {
   event.preventDefault()
+  console.log(event)
   const data = getFormFields(event.target)
   console.log('passing through event js')
-  console.log(data)
-  userApi.signUp(data)
-    .then(userUi.onSignUpSuccess)
-    .catch(userUi.onError)
+  console.log()
+  debugger
+  postsApi.createPost(data)
+    .then(postsUi.onCreatePostSuccess)
+    .then(onGetPosts(event))
+    .catch(postsUi.onCreatePostError)
 }
 
-const onSignIn = function (event) {
+const onGetPosts = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  userApi.signIn(data)
-    .then(userUi.onSignInSuccess)
-    .catch(userUi.onSignInError)
+  postsApi.getPosts(data)
+    .then(postsUi.onGetPostsSuccess)
+    .catch(postsUi.onGetPostsError)
 }
 
-const onChangePassword = function (event) {
+const onShowPost = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  userApi.changePassword(data)
-    .then(userUi.onChangePasswordSuccess)
-    .catch(userUi.onChangePasswordError)
+  postsApi.showPost(data)
+    .then(postsUi.onShowPostSuccess)
+    .catch(postsUi.onShowPostError)
 }
 
-const onSignOut = function (event) {
+const onDeletePosts = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  userApi.signOut()
-    .then(userUi.onSignOutSuccess)
-    .catch(userUi.onSignOutError)
+  postsApi.deletePosts(data)
+    .then(postsUi.onDeletePostsSuccess)
+    .catch(postsUi.onDeletePostsError)
 }
 
-const onCreatePost = function (event) {
+const onUpdatePost = function (event) {
   console.log('passing through products event js')
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   const data = getFormFields(event.target)
   // may need to update name of create after html is created
-  userApi.createPost(data)
-    .then(userUi.onCreatePostSuccess)
-    .catch(userUi.onCreatePostError)
-}
-
-const onGetService = function(event) {
-  event.preventDefault();
-  const data = getFormFields(event.target)
-  userApi.getService(data)
-    .then(userUi.onGetServiceSuccess)
-    .catch(userUi.onGetServiceError)
+  postsApi.updatedPost(data)
+    .then(postsUi.onUpdatePostSuccess)
+    .then(onGetPosts(event))
+    .catch(postsUi.onUpdatePostError)
 }
 
 module.exports = {
-  onSignUp,
-  onSignIn,
-  onChangePassword,
-  onSignOut,
   onCreatePost,
-  onGetService
+  onGetPosts,
+  onShowPost,
+  onDeletePosts,
+  onUpdatePost
 }

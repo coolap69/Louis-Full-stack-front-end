@@ -17,6 +17,7 @@ const onSignInSuccess = function (data) {
   hide.signIn()
   console.log('You successfully sign in')
   app.user = data.user
+  console.log(app.user)
 }
 
 const onSignInError = function (response) {

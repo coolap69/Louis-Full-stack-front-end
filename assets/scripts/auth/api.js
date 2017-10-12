@@ -1,10 +1,10 @@
 'use strict'
 
-const app = require('./app.js')
+const app = require('../app.js')
 
 const signUp = function (data) {
   console.log('passing thought api js')
-  console.log(app.host)
+  // console.log(app.host)
   return $.ajax({
     url: app.host + '/sign-up',
     method: 'POST',

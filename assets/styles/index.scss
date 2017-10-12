@@ -5,9 +5,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 //////////Body/////////
 ////////////////////////////////
 
-// body {
-//   // background-color: #EAE9DF;
-// }
+body {
+width: 96%;
+margin: 10px auto;
+padding: 10px;
+border: solid #808888 5px;
+}
 
 //////////////////////////////////
 //////////sign out form/////////

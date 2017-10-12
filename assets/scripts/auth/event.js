@@ -33,35 +33,14 @@ const onChangePassword = function (event) {
 const onSignOut = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  userApi.signOut()
+  userApi.signOut(data)
     .then(userUi.onSignOutSuccess)
     .catch(userUi.onSignOutError)
-}
-
-const onCreatePost = function (event) {
-  console.log('passing through products event js')
-  console.log(data)
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  // may need to update name of create after html is created
-  userApi.createPost(data)
-    .then(userUi.onCreatePostSuccess)
-    .catch(userUi.onCreatePostError)
-}
-
-const onGetService = function(event) {
-  event.preventDefault();
-  const data = getFormFields(event.target)
-  userApi.getService(data)
-    .then(userUi.onGetServiceSuccess)
-    .catch(userUi.onGetServiceError)
 }
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut,
-  onCreatePost,
-  onGetService
+  onSignOut
 }

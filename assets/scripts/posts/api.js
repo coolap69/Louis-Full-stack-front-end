@@ -1,75 +1,72 @@
 'use strict'
 
 const app = require('../app.js')
+const store = require('../store.js')
 
-const createAd = function (data) {
+const createPost = function (data) {
+console.log(store.user)
+debugger
   return $.ajax({
-    url: app.host + '/ads/',
+    url: app.host + '/posts',
     method: 'POST',
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      'ad': {
-        'user_id': data.user_id,
-        'product_name': data.product_name,
-        'quantity': data.quantity
-      }
+    post: {
+      user_id: data.user_id,
+      description: data.description,
+      title: data.title,
+      date_time: data.date_time,
+      service_id: data.service_id
     }
   })
 }
 
-const getAds = function (data) {
+const getPosts = function (data) {
   return $.ajax({
-    url: app.host + '/ads/',
+    url: app.host + '/posts/',
     method: 'GET',
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const showAd = function (data) {
+const showPost = function (data) {
   return $.ajax({
-    url: app.host + '/ads/' + app.user.id,
+    url: app.host + '/posts/' + store.user.id,
     method: 'GET',
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const deleteAds = function (data) {
+const deletePosts = function (data) {
   return $.ajax({
-    url: app.host + '/ads/' + app.user.id,
+    url: app.host + '/posts/' + store.user.id,
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const updateAd = function (data) {
+const updatePost = function (data) {
   return $.ajax({
-    url: app.host + '/ads/' + app.user.id,
+    url: app.host + '/posts/' + store.user.id,
     method: 'PATCH',
     headers: {
-      Authorization: 'Token token=' + app.user.token
+      Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      'ad': {
-        'user_id': data.user_id,
-        'product_name': data.product_name,
-        'quantity': data.quantity
-      }
-    }
+    data
   })
 }
 
 module.exports = {
-  createAd,
-  getAds,
-  showAd,
-  deleteAds,
-  updateAd
+  createPost,
+  getPosts,
+  showPost,
+  deletePosts,
+  updatePost
 }
