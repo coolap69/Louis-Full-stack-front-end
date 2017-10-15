@@ -15,8 +15,8 @@ $(() => {
   $('#signIn').on('submit', event.onSignIn)
   $('#change-password').on('submit', event.onChangePassword)
   $('#signOut').on('submit', event.onSignOut)
-  $('#helloB').on('submit', postevent.onCreatePost)
-  $('#helloB1').on('click', postevent.onGetPosts)
+  $('#GetPost').on('submit', postevent.onCreatePost)
+  $('#GetPost1').on('click', postevent.onGetPosts)
 
   // $('#postButton').on('click', event.onGetService)
   // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
@@ -31,12 +31,14 @@ $(() => {
 /// time clock ///
 let timeleft = 0
 const downloadTimer = setInterval(function () {
-  // timeleft--;
-  // document.getElementById("countdowntimer").textContent = timeleft;
-  if (timeleft > 7) {
-    clearInterval(downloadTimer)
+  // timeleft--
+  document.getElementById('countdowntimer').textContent = timeleft
+  if (timeleft > 6) {
+    // clearInterval(downloadTimer)
+    timeleft = 1
+  } else {
+    timeleft++
   }
-  timeleft++
 }, 1000)
 
 // let counter = 0

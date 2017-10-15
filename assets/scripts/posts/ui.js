@@ -1,8 +1,12 @@
 'use strict'
 
 const app = require('../app.js')
+const hide = require('../hide.js')
+
+// const index =require('../index.js')
 
 const onCreatePostSuccess = function () {
+  hide.countDownTimer()
   console.log('You successfully post an item')
   // app.user = data.user
 }
@@ -14,6 +18,8 @@ const onCreatePostError = function (response) {
 const onGetPostsSuccess = function (data) {
   app.posts = data.posts
   console.log(app.posts)
+  hide.lookCountDownTimer()
+  console.log('You successfully show time')
 
   /*
   save the data coming in here as post data
@@ -34,7 +40,7 @@ const onGetPostsSuccess = function (data) {
     } else {
       timeleft++
     }
-  }, 1000)
+  }, 7000)
 
   // $('.wholepicture').html(`<h1>${app.posts[2].title}</h1>${app.posts[2].description}`)
   console.log(app)

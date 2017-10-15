@@ -127,42 +127,48 @@
     <div class="hero"><img src="https://i.imgur.com/o3dOqQY.png" alt="Add me to your life" title="source: imgur.com" width="80%" height="80%"></div>
 
     <!-- Timer -->
-
-    <div class="btn btn-block button2">Timer: <span id="countdowntimer"> 7 </span> Seconds till next Wad</div>
+    <div class="btn btn-block button2">Timer: <span id="countdowntimer"></span> Seconds till next Wad</div>
     <div class="clear1"></div>
 
     <!-- left side services -->
 
       <div class="table" id="left">
-          <div class="col-xs-4" id="services">Services </div>
+          <div class="services">Services </div>
           <br> </br>
       <div class="col-xs-4" id="inside">
         <div class="button">Mechanic
               <div class="dropdown-content1">
-                <form id="helloB">
+                <form id="GetPost">
                   <label>Title</label>
                   <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
                   <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
-                  <label>Description</label>
-                  <input type="text" name="post[description]" class="form-control" id="description" placeholder="Description">
+                  <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+                  </textarea>
                   <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
                   <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
-                </form>
-              </div>
-              </div>
-        <!-- <tr> -->
-
-          <!-- <div class="empty"></div> -->
-
-
-        <!-- </tr>
-        <tr>
-          <td> -->
-
-              </div>
+              </form>
             </div>
+          </div>
+          <button class="btn" id="GetPost1">Show Post</button>
 
-              <!-- <button class="col-xs-4 btn" id="helloB1">HEYO</button> -->
+            <div class="button">Painting
+                  <div class="dropdown-content1">
+                    <form id="GetPost">
+                      <label>Title</label>
+                      <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+                      <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+                      <label>Description</label>
+                      <input type="text" name="post[description]" class="form-control" id="description" placeholder="Description">
+                      <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+                      <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+                    </form>
+                  </div>
+                </div>
+                <button class="btn" id="GetPost1">Show Post</button>
+          </div>
+        </div>
+
+
           <!-- </td>
         </tr> -->
 
@@ -342,10 +348,10 @@
   <!-- <div class="row col-lg-12"> -->
 
 <!-- <div>
-    <div class="wholepicture"><img src="https://i.imgur.com/PFRsbL7.png" alt="Big screen" title="source: imgur.com" /width="80%" height="70%">
+    <div class="wholepicture"><img src="https://i.imgur.com/PFRsbL7.png" alt="Big screen" title="source: imgur.com" /width="80%" height="70%"> -->
   <div class ="rotatingmessages"></div>
 
-    <div class="clear"></div>
+    <!-- <div class="clear"></div>
 
 
     <div class="buttonservices">Show Me a Service

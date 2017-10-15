@@ -1,7 +1,7 @@
 'use strict'
 
 const app = require('../store.js')
-const hide = require('./hide.js')
+const hide = require('../hide.js')
 
 const onSignUpSuccess = function () {
   hide.signUp()
@@ -41,21 +41,6 @@ const onSignOutError = function (response) {
   console.log(response)
 }
 
-const onCreatePostSuccess = function () {
-  console.log('You successfully created a post')
-}
-
-const onCreatePostError = function (response) {
-  console.error(response)
-}
-
-const onGetServiceSuccess = function () {
-  console.log('You successfully created posted')
-}
-
-const onGetServiceError = function (response) {
-  console.error(response)
-}
 module.exports = {
   onSignUpSuccess,
   onError,
@@ -64,9 +49,5 @@ module.exports = {
   onChangePasswordSuccess,
   onChangePasswordError,
   onSignOutSuccess,
-  onSignOutError,
-  onCreatePostSuccess,
-  onCreatePostError,
-  onGetServiceSuccess,
-  onGetServiceError
+  onSignOutError
 }
