@@ -5,7 +5,7 @@ const store = require('../store.js')
 
 const createPost = function (data) {
 console.log(store.user)
-debugger
+// debugger
   return $.ajax({
     url: app.host + '/posts',
     method: 'POST',

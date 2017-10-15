@@ -16,6 +16,8 @@ $(() => {
   $('#change-password').on('submit', event.onChangePassword)
   $('#signOut').on('submit', event.onSignOut)
   $('#helloB').on('submit', postevent.onCreatePost)
+  $('#helloB1').on('click', postevent.onGetPosts)
+
   // $('#postButton').on('click', event.onGetService)
   // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
 })
@@ -26,11 +28,26 @@ $(() => {
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-///////// time clock //////
-let timeleft = 7
-let downloadTimer = setInterval(function() {
-  timeleft--;
-  document.getElementById("countdowntimer").textContent = timeleft;
-  if (timeleft <= 0)
-    clearInterval(downloadTimer);
-}, 1000);
+/// time clock ///
+let timeleft = 0
+const downloadTimer = setInterval(function () {
+  // timeleft--;
+  // document.getElementById("countdowntimer").textContent = timeleft;
+  if (timeleft > 7) {
+    clearInterval(downloadTimer)
+  }
+  timeleft++
+}, 1000)
+
+// let counter = 0
+// let Timer = createP
+//
+// function setup() {
+//   Timer = ('Timer')
+//   setInterval(timeIt, 500)
+// }
+//
+// function timeIt() {
+//   Timer.html(counter)
+//   counter++
+// }

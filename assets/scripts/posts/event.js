@@ -10,7 +10,6 @@ const onCreatePost = function (event) {
   const data = getFormFields(event.target)
   console.log('passing through event js')
   console.log()
-  debugger
   postsApi.createPost(data)
     .then(postsUi.onCreatePostSuccess)
     .then(onGetPosts(event))

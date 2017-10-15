@@ -11,10 +11,9 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-</head>
 
 <body>
-
+<div class="container-fluid">
   <!-- Signup/Log in-->
 
   <div id="container">
@@ -112,10 +111,10 @@
     </div>
   </div>
 
-
   <!-- Home bar -->
   <div id="sign">
     <div class="top">Home</div>
+  </div>
 
     <!-- Log out form  -->
     <form class="form-group">
@@ -128,18 +127,17 @@
     <div class="hero"><img src="https://i.imgur.com/o3dOqQY.png" alt="Add me to your life" title="source: imgur.com" width="80%" height="80%"></div>
 
     <!-- Timer -->
-    <div class="button2">Timer: <span id="countdowntimer"> 7 </span> Seconds till next Wad</div>
+
+    <div class="btn btn-block button2">Timer: <span id="countdowntimer"> 7 </span> Seconds till next Wad</div>
     <div class="clear1"></div>
 
     <!-- left side services -->
-    <div id="table">
-      <table id="inside">
-        <tr>
-          <th id="services">Services</th>
-        </tr>
-        <tr>
-          <td>
-            <div class="button">hello
+
+      <div class="table" id="left">
+          <div class="col-xs-4" id="services">Services </div>
+          <br> </br>
+      <div class="col-xs-4" id="inside">
+        <div class="button">Mechanic
               <div class="dropdown-content1">
                 <form id="helloB">
                   <label>Title</label>
@@ -151,10 +149,24 @@
                   <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
                 </form>
               </div>
-            </div>
-          </td>
-        </tr>
+              </div>
+        <!-- <tr> -->
+
+          <!-- <div class="empty"></div> -->
+
+
+        <!-- </tr>
         <tr>
+          <td> -->
+
+              </div>
+            </div>
+
+              <!-- <button class="col-xs-4 btn" id="helloB1">HEYO</button> -->
+          <!-- </td>
+        </tr> -->
+
+        <!-- <tr>
           <td>
             <div class="button">Painting
               <div class="dropdown-content1">
@@ -325,15 +337,15 @@
     </div>
   </div>
 
+ -->
 
-  <div class="wholepicture"><img src="https://i.imgur.com/PFRsbL7.png" alt="Big screen" title="source: imgur.com" /width="90%" height="90%">
+  <!-- <div class="row col-lg-12"> -->
+
+<!-- <div>
+    <div class="wholepicture"><img src="https://i.imgur.com/PFRsbL7.png" alt="Big screen" title="source: imgur.com" /width="80%" height="70%">
+  <div class ="rotatingmessages"></div>
+
     <div class="clear"></div>
-
-
-
-
-    <div class="clear"></div>
-
 
 
     <div class="buttonservices">Show Me a Service
@@ -404,46 +416,21 @@
               <div class="button4">Business</div>
             </td>
           </tr>
-
         </table>
-
       </div>
     </div>
-
-    <!-- <div id="wholepicture2">Posting -->
-
-    <!-- <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Title</label>
-    <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title">
-    <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
-
-
-  <div class="form-group">
-    <label for="exampleInputEmail1">Description</label>
-    <input type="email" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description">
-    <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
   </div>
-
-
--->
-    <!-- <button type="submit" class="btn btn-primary" id="postButton">Submit</button> -->
-    <!-- </form> -->
-
-
-    <!-- </div> -->
-
-
+</div>
 
     <div class="clear"></div>
-    <div class="wholepicture1"><img src="https://i.imgur.com/PFRsbL7.png" alt="Small today screen" title="source: imgur.com" /width="90%" height="90%">
+    <div class="wholepicture1"><img src="https://i.imgur.com/c5nzr7v.png" alt="Small today screen" title="source: imgur.com" /width="60%" height="60%">
       <div class="clearsmalltv">
 
       </div>
 
       <div class="today">Today</div>
     </div>
-    <div class="wholepicture1"><img src="https://i.imgur.com/PFRsbL7.png" alt="Small yesterday" title="source: imgur.com" /width="90%" height="90%">
+    <div class="wholepicture1"><img src="https://i.imgur.com/c5nzr7v.png" alt="Small yesterday" title="source: imgur.com" /width="60%" height="60%">
       <div class="clearsmalltv"></div>
       <div class="yesterday">Yesterday</div>
 
@@ -451,7 +438,7 @@
     </div>
   </div>
 
-  <div id="table">
+  <div class="table" id="right">
     <table id="inside">
       <tr>
         <th id="services">Services</th>
@@ -516,7 +503,7 @@
     </table>
   </div>
   <footer>Designed by Louis Pazos</footer>
-
+</div> -->
 </body>
 
 </html>
