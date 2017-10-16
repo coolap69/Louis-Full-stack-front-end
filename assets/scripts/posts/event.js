@@ -34,8 +34,8 @@ const onShowPost = function (event) {
 
 const onDeletePosts = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  postsApi.deletePosts(data)
+  const id = $(this).data('id')
+  postsApi.deletePosts(id)
     .then(postsUi.onDeletePostsSuccess)
     .catch(postsUi.onDeletePostsError)
 }

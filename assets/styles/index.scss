@@ -1,39 +1,43 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap'; //////////Signup///////
-
 //////////////////////////////////
 //////////Body/////////
 ////////////////////////////////
-
-body {
-
-font-size: 3vh 3vw;
-}
+// body {
 //
-// .container-fluid {
-//   max-width: 600px;
-//   margin: 0 auto;
+//
 // }
+// .container-fluid {
+//   // max-width: 90%;
+//   // margin: 0 auto;
+// }
+
+.logo1 {
+  color: #808888;
+  font-family: Garamond;
+  font-size: 6vw;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
 //////////////////////////////////
 //////////sign out form/////////
 ////////////////////////////////
+
 .centered-form {
   margin-top: 10px;
 }
 
 .centered-form .panel {
-  box-shadow: rgba(0, 0, 0, .2) 15px 15px 15px;
   background-color: #808888;
-
+  box-shadow: rgba(0, 0, 0, .2) 15px 15px 15px;
 }
 // #container2 {
 // padding-left: 30p
 
 #sign-out {
-  float:right
-
+  float: right;
 }
-
 //////////////////////////////////
 //////////Countdow clock/////////
 ////////////////////////////////
@@ -45,7 +49,7 @@ font-size: 3vh 3vw;
 //   // color: #ffff00;
 // }
 
-#countdowntimer {
+#countDownTimer {
   color: ffff00;
   font-family: cursive;
   font-size: 2vw;
@@ -63,14 +67,16 @@ font-size: 3vh 3vw;
   font-size: 1.8vw;
   height: 2%;
   left: 30%;
-  margin-top: 200px;
+  margin-top: 140px;
+  // margin-left: 50px;
   position: relative;
-  text-align: center;
   text-shadow: 0 1px 0 #263669;
+  text-align: center;
   width: 40%;
   padding-top: 12px;
 }
 ////////////////////////
+///HomeBar//
 .top {
   background-color: lightgrey;
   color: #808888;
@@ -93,19 +99,19 @@ font-size: 3vh 3vw;
   height: 100px;
   line-height: 130px;
   // padding-left: 1%;
-  width: 30%;
   margin: auto;
   padding-top: 70px;
+  width: 30%;
 }
 
 .hero {
   background-color: yellow;
   float: left;
   height: 80px;
-  padding-top: 10px;
   margin-top: 26px;
-  width: 70%;
   padding-left: 20px;
+  padding-top: 10px;
+  width: 70%;
 }
 
 // .logs {
@@ -115,17 +121,17 @@ font-size: 3vh 3vw;
 //   width: 20%;
 // }
 /////////////////////////
+///Left table///
 .table {
+  background-color: #808888;
+  border-radius: 10px;
   float: left;
   height: 890px;
   margin: auto;
-  border-radius: 10px;
   width: 25%;
-  background-color: #808888;
   // border: 2px solid #39cccc;
   // color: white;
 }
-
 // th {
 //   color: #ffff00;
 //   font-family: fantasy;
@@ -144,18 +150,16 @@ font-size: 3vh 3vw;
 
 #inside {
   // background-color: red;
-  height: 750px;
-  width: 80%;
-  border: 3px solid #39cccc;
-  align-content: center;
   float: none;
-  text-align: center;
-  align-content: center;
-  padding: 10px;
+  border: 3px solid #39cccc;
+  align-content: center;border: 3px solid #39cccc;
+  height: 750px;
   margin: auto;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
   // margin-top: 30px;
 }
-
 // .middle {
 //   background-color: red;
 //   height: 890px;
@@ -165,29 +169,48 @@ font-size: 3vh 3vw;
 //   float: left;
 // }
 
-
-.wholepicture {
-
+/// Show and Delete buttons ///
+#GetPost1 {
+  background-color: yellow;
   text-align: center;
-  // width: 100%;
-  background-color: purple;
-  color: yellow;
+  color: black;
+  margin-left: 10px;
+  height: 27px;
+}
+
+#DeletePost {
+  background-color: yellow;
+  color: #000000;
+  height: 27px;
+  margin-left: -10px;
+}
+
+///////
+.wholepicture {
+  align-items: center;
   float: left;
-  // display: inline;
+  margin-top: 26px;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-align: center;
+  width: 40%;
 }
 
 .rotatingmessages {
-    background-color: red;
-    float: left;
-    width: 48%;
-    text-align: center;
-    margin: 2px 10px;
-    display: inline;
+  display: inline;
+  float: left;
+  text-align: center;
+  font-size: 4vw;
+  width: 45vw;
+  margin-top: -400px;
+  position: relative;
+  z-index: 2;
 }
 
 //////////////////////////////////
 //////////Small TV's/////////////
 ////////////////////////////////
+
 .wholepicture1 {
   text-align: center;
   float: left;
@@ -231,7 +254,7 @@ font-size: 3vh 3vw;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
   width: 220px;
-  margin:auto;
+  margin: auto;
   padding-top: 10px;
 }
 
@@ -246,7 +269,6 @@ font-size: 3vh 3vw;
 }
 
 /////////////////////
-
 .services {
   background-color: black;
   border-top-left-radius: 10px;
@@ -255,21 +277,19 @@ font-size: 3vh 3vw;
   font-size: 4vw;
   font-family: fantasy;
   font-weight: 300;
-  text-align: center;
   height: 7vw;
-  width: 24.3vw;
   padding: 10px;
+  text-align: center;
+  width: 24.4vw;
   // margin-bottom: 20px;
 }
 
 .empty {
-  background-color: red
-
+  background-color: red;
 }
 
 .button {
   align-content: center;
-  text-align: center;
   background-color: black;
   border: 4px solid #1f2f45;
   border-radius: 17px;
@@ -279,11 +299,11 @@ font-size: 3vh 3vw;
   font-size: 2vw;
   margin: 5px;
   padding: 5px 20px;
+  padding-top: 12px;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
   width: 16vw;
   // margin:auto;
-  padding-top: 12px;
 }
 
 .button:hover {
@@ -294,6 +314,7 @@ font-size: 3vh 3vw;
 //////////////////////////////////
 /////////all services button/////////
 ////////////////////////////////
+
 .buttonservices {
   // align-content: center;
   background-color: black;
@@ -301,42 +322,38 @@ font-size: 3vh 3vw;
   border-radius: 17px;
   color: #ffffff;
   // display: run-in;
+  display: inline-block;
   font-family: fantasy;
   font-size: 20px;
   margin: 5px;
   padding: 5px 20px;
+  padding-top: 10px;
+  position: relative;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
   width: 220px;
-  margin:auto;
-  padding-top: 10px;
-  position: relative;
-  display: inline-block;
 }
 
 .buttonservices:hover {
   background-color: #747575;
   color: #ffffff;
 }
-
 // .dropdown {
 //     position: relative;
 //     display: inline-block;
 // }
 
 .dropdown-content {
-    display: none;
-
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(116,117,117,0.2);
-    border-radius: 15px;
-    padding: 12px 16px;
-
+  border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgba(116, 117, 117, 0.2);
+  display: none;
+  min-width: 160px;
+  padding: 12px 16px;
+  position: absolute;
 }
 
 .buttonservices:hover .dropdown-content {
-display: block;
+  display: block;
 }
 
 #table1 {
@@ -345,8 +362,8 @@ display: block;
   border-radius: 10px;
   float: left;
   height: 200px;
-  width: 10%;
   margin: auto;
+  width: 10%;
 }
 
 // #table2 {
@@ -373,10 +390,10 @@ display: block;
   font-family: fantasy;
   font-size: 12px;
   margin: 5px;
+  padding-top: 5px;
   text-align: center;
   text-shadow: 0 1px 0 #263669;
   width: 120px;
-  padding-top: 5px;
 }
 
 .button4:hover {
@@ -384,71 +401,58 @@ display: block;
   color: #ffffff;
 }
 
-
-
-
 /////////////random spaces////
 .clear {
   margin: 20px;
   width: 20px;
 }
 
-
-
-
 #container {
-  width: 100%;
   margin: auto;
+  width: 100%;
 }
-
 
 #wholepicture2 {
+  background-color: yellow;
+  float: left;
   width: 10%;
   height: 60%;
-  background-color: yellow;
   text-align: center;
-  float: left;
 }
 
-
 .dropdown-content1 {
-    display: none;
-    text-align: center;
-    font-size: 16px;
-    position: absolute;
-    min-width: 60px;
-    min-height: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(116,117,117,0.2);
-    border-radius: 15px;
-    padding: 8px 8px;
-
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  min-width: 60px;
+  min-height: 20px;
+  box-shadow: 0 8px 16px 0 rgba(116,117,117,0.2);
+  border-radius: 15px;
+  padding: 8px;
 }
 
 .button:hover .dropdown-content1 {
-
-background-color: rgba(255, 255, 0, 0.6);
-display:inline;
-margin-left: 4%;
-margin-bottom: 2%;
-width: 100%;
-
+  background-color: rgba(255, 255, 0, 0.6);
+  display: inline;
+  margin-left: 4%;
+  margin-bottom: 2%;
+  width: 100%;
 }
 
 .dropdown-content2 {
-
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(116,117,117,0.2);
-    border-radius: 15px;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(116,117,117,0.2);
+  border-radius: 15px;
 }
 
 .button:hover .dropdown-content2 {
-
-background-color: rgba(255, 255, 0, 0.6);
-display:block;
-margin-right: 100%;
-margin-bottom: 100%;
+  background-color: rgba(255, 255, 0, 0.6);
+  display: block;
+  margin-right: 100%;
+  margin-bottom: 100%;
 }
 
 #postButton {
@@ -464,10 +468,12 @@ margin-bottom: 100%;
 // height: 50px
 //
 // }
+
 footer {
   font-size: 10px;
   color: white;
 }
+
 // #outside {
 //   background-color: green;
 //   height: 200px;

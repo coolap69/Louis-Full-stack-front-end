@@ -17,6 +17,8 @@ $(() => {
   $('#signOut').on('submit', event.onSignOut)
   $('#GetPost').on('submit', postevent.onCreatePost)
   $('#GetPost1').on('click', postevent.onGetPosts)
+  $('#countDownTimer').on('click', postevent.onGetPosts)
+  $('#DeletePost').on('click', postevent.onDeletePosts)
 
   // $('#postButton').on('click', event.onGetService)
   // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
@@ -32,7 +34,7 @@ $(() => {
 let timeleft = 0
 const downloadTimer = setInterval(function () {
   // timeleft--
-  document.getElementById('countdowntimer').textContent = timeleft
+  document.getElementById('countDownTimer').textContent = timeleft
   if (timeleft > 6) {
     // clearInterval(downloadTimer)
     timeleft = 1

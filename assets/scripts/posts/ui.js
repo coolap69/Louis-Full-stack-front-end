@@ -2,6 +2,7 @@
 
 const app = require('../app.js')
 const hide = require('../hide.js')
+// const store = require('../store.js')
 
 // const index =require('../index.js')
 
@@ -16,10 +17,10 @@ const onCreatePostError = function (response) {
 }
 
 const onGetPostsSuccess = function (data) {
+  hide.countDownTimer()
   app.posts = data.posts
   console.log(app.posts)
-  hide.lookCountDownTimer()
-  console.log('You successfully show time')
+  console.log('You successfully get post')
 
   /*
   save the data coming in here as post data
@@ -52,6 +53,7 @@ const onGetPostsError = function (response) {
 }
 
 const onShowPostSuccess = function () {
+  hide.countDownTimer()
   console.log('You succesfully showing your posting')
 }
 
@@ -60,6 +62,7 @@ const onShowPostError = function (response) {
 }
 
 const onDeletePostsSuccess = function () {
+  // $('.' + app.posts.id).remove()
   console.log('You successfully deleted your post')
 }
 
