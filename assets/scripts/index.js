@@ -16,7 +16,7 @@ $(() => {
   $('#change-password').on('submit', event.onChangePassword)
   $('#signOut').on('submit', event.onSignOut)
   $('#GetPost').on('submit', postevent.onCreatePost)
-  $('#GetPost1').on('click', postevent.onGetPosts)
+  $('#showPost').on('click', postevent.onGetPosts)
   $('#countDownTimer').on('click', postevent.onGetPosts)
   $('#DeletePost').on('click', postevent.onDeletePosts)
 

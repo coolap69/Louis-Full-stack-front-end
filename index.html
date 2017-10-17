@@ -13,6 +13,8 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
 <body>
+  <div class="container-fluid">
+
 
       <div class="row centered-form">
       <div class="logo1">Welcome to Wads!</div>
@@ -131,10 +133,12 @@
     <!-- Tittle -->
     <div class="logo">Wads</div>
     <div class="hero"><img src="https://i.imgur.com/o3dOqQY.png" alt="Add me to your life" title="source: imgur.com" width="80%" height="80%"></div>
+    <div class="clear"></div>
+
 
     <!-- Timer -->
     <div class="btn btn-block button2">Timer: <span id="countDownTimer"></span> Seconds till next Wad</div>
-    <div class="clear1"></div>
+    <div class="clear"></div>
 
     <!-- left side services -->
 
@@ -156,10 +160,10 @@
             </div>
           </div>
           <div class="row">
-   <div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+   <div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
    <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
-          <!-- <button class="btn" id="GetPost1">Show Post</button>
+          <!-- <button class="btn" id="showPost">Show Post</button>
           <button class="btn" id="DeletePost">Delete Post</button>
         </div> -->
 
@@ -177,7 +181,7 @@
             </div>
           </div>
           <div class="row">
-        <div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+        <div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
         <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
         </div>
 
@@ -195,7 +199,7 @@
             </div>
           </div>
           <div class="row">
-   <div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+   <div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
    <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
 
@@ -213,7 +217,7 @@
     </div>
   </div>
   <div class="row">
-<div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
 <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
 
@@ -231,7 +235,7 @@
     </div>
   </div>
   <div class="row">
-<div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
 <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
 
@@ -249,7 +253,7 @@
     </div>
   </div>
   <div class="row">
-<div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
 <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
 
@@ -267,7 +271,7 @@
     </div>
   </div>
   <div class="row">
-<div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
 <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
 
@@ -285,27 +289,179 @@
     </div>
   </div>
   <div class="row">
-<div class="col-xs-6"><button class="btn btn-block btn" id="GetPost1">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
 <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
 </div>
 </div>
 </div>
 
+
 <!-- <div class="clear"></div> -->
 <div class="flat" id="flat">
       <div class="wholepicture">
-        <img src="https://i.imgur.com/P0uFMpD.png" alt="Big screen" title="source: imgur.com" width=120% height=120%>
+        <img src="https://i.imgur.com/P0uFMpD.png" alt="Big screen" title="source: imgur.com">
   <div class ="rotatingmessages"></div>
 </div>
 </div>
     <!-- <div class="clear"></div> -->
 
     <!-- right side services -->
+    <div class="table" id="right">
+        <div class="services1">Services </div>
+        <br> </br>
+    <div class="col-xs-4" id="inside">
+      <div class="button">Mechanic
+            <div class="dropdown-content1">
+              <form id="GetPost">
+                <label>Title</label>
+                <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+                <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+                </textarea>
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+                <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+ <div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+ <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+        <!-- <button class="btn" id="showPost">Show Post</button>
+        <button class="btn" id="DeletePost">Delete Post</button>
+      </div> -->
+
+    <div class="button">Painting
+            <div class="dropdown-content1">
+              <form id="GetPost">
+                <label>Title</label>
+                <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+                <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+                </textarea>
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+                <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+      <div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+      <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+      </div>
+
+      <div class="button">Health
+            <div class="dropdown-content1">
+              <form id="GetPost">
+                <label>Title</label>
+                <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+                <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+                </textarea>
+                <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+                <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+ <div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+ <div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+
+<div class="button">Pet Care
+    <div class="dropdown-content1">
+      <form id="GetPost">
+        <label>Title</label>
+        <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+        <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+        </textarea>
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+        <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+
+<div class="button">Labor
+    <div class="dropdown-content1">
+      <form id="GetPost">
+        <label>Title</label>
+        <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+        <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+        </textarea>
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+        <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+
+<div class="button">Electronics
+    <div class="dropdown-content1">
+      <form id="GetPost">
+        <label>Title</label>
+        <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+        <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+        </textarea>
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+        <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+
+<div class="button">Therapeutic
+    <div class="dropdown-content1">
+      <form id="GetPost">
+        <label>Title</label>
+        <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+        <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+        </textarea>
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+        <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+
+<div class="button">Beauty
+    <div class="dropdown-content1">
+      <form id="GetPost">
+        <label>Title</label>
+        <input type="text" name="post[title]" class="form-control" id="title" placeholder="Title">
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Title</small>
+        <textarea maxlength="200" type="text" name="post[description]" class="form-control" id="description" placeholder="Description">Description
+        </textarea>
+        <small id="emailHelp" class="form-text text-muted">Give your Wad a Description</small>
+        <button type="submit" class="btn btn-primary" id="postButton">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+<div class="col-xs-6"><button class="btn btn-block btn" id="showPost">Show</button></div>
+<div class="col-xs-6"><button class="btn btn-block btn" id="DeletePost">Delete</button></div>
+</div>
+</div>
+</div>
 
 
 
-
-    <!-- <div class="buttonservices">Show Me a Service
+    <div class="buttonservices">Show Me a Service
       <div class="dropdown-content">
         <button type="submit" class="btn btn-primary" id="postButton1">Submit</button>
         <table id="table1">
@@ -377,8 +533,7 @@
       </div>
     </div>
   </div>
-</div>
-
+<!--
     <div class="clear"></div>
     <div class="wholepicture1"><img src="https://i.imgur.com/c5nzr7v.png" alt="Small today screen" title="source: imgur.com" /width="60%" height="60%">
       <div class="clearsmalltv">

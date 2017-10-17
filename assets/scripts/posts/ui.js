@@ -31,7 +31,7 @@ const onGetPostsSuccess = function (data) {
   */
   let timeleft = 0
   const downloadTimer = setInterval(function () {
-    $('.rotatingmessages').html(`<h1>${app.posts[timeleft].title}</h1>${app.posts[timeleft].description}`)
+    $('.rotatingmessages').html(`<h1>${app.posts[timeleft].title}</h1><h2>${app.posts[timeleft].description}</h2>`)
     console.log(timeleft)
     console.log(app.posts.length)
     if (timeleft > app.posts.length - 2) {
